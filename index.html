@@ -1,0 +1,153 @@
+<!DOCTYPE html> <!--indica al navegador el lenguaje de programación-->
+<html lang="es"> <!--el idioma en que estara la web-->
+
+<head> <!-- va toda la información que no se va a visualizar-->
+    <meta charset="UTF-8"> <!-- navegador reconozca caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Metadata: visualización correcta en los diferentes navegadores-->
+    <title>Portafolio - Tatiana Nieto</title> <!-- título de la Web-->
+    <link rel="stylesheet" href="styles.css"> <!--linkear hoja de estilos-->
+    <script src="script.js"></script>
+</head>
+<body> <!--la estructura que el usuario va a visualizar-->
+    <header id="encabezado"> 
+        <div class="icon">
+            <!--img src="img/logo.png" alt="logo menu" class="logo"-->
+            <!--Etiquetas de encabezados H#-->
+            <h2 class="nombre" id="nombre">
+                ¡Bienvenidos!
+            </h2> 
+        </div>
+        
+       <!--Navegación-->
+       <div id="toggle-menu" class="toggle-menu">
+            <img src="img/bars-solid.svg" alt="">
+        </div>
+        <nav class="main-nav">         
+            <ul id="main-menu" class="main-menu">
+                <li class="menu-item">
+                    <a href="#banner" class="menu-link">Inicio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#sobre-mi" class="menu-link">Quien soy</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#trabajos" class="menu-link">Portafolio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#form-header" class="menu-link">Contactame</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <div class="Banner" id="banner">
+            <!--Imagen de banner-->
+            <img src="img/banner.jpg" alt="Banner" width="100%" > 
+         </div>
+        <br>
+
+        <!--Presentación personal-->
+        <section class="datos" id="sobre-mi">
+            <h2 class="by-me">SOBRE MÍ</h2>
+            <div class="info">
+                 <!--Imagen de perfil-->
+                <img src="img/perfil.jpg" alt="Perfil" width="280" height="300">
+                <p class="fuente-oscura">
+                    Un gusto conocerlos, mi nombre es Tatiana Nieto, tengo 27 años y vivo en Colombia. Estudié Ingenieria en Multimedia
+                    en la Universidad Militar Nueva Granada, actualmente trabajo como Diseñadora Junior de Experiancia de Usuario (UX/UI),
+                    en una Casa Editorial, donde e podido desempeñar diversas habilidades como: Pruebas con usuarios, trabajo colaborativo,
+                    incluso e desempolvado algunos conceptos en tems de programación FrontEnd y BackEnd. 
+                </p>
+                <p class="parrafo2">
+                    Un gusto conocerlos, mi nombre es Tatiana Nieto, tengo 27 años y vivo en Colombia. Estudié Ingenieria en Multimedia
+                    en la Universidad Militar Nueva Granada, actualmente trabajo como Diseñadora Junior de Experiancia de Usuario (UX/UI),
+                    en una Casa Editorial, donde e podido desempeñar diversas habilidades como: Pruebas con usuarios, trabajo colaborativo,
+                    incluso e desempolvado algunos conceptos en tems de programación FrontEnd y BackEnd. 
+                </p>
+                <!--button type="button" id="btn">¡Saber más!</button-->
+            </div>
+        </section>
+        <br>
+         <!--Tarjetas proyectos-->
+         <div class="proyectos">
+            <h2 style="text-align: center;">MIS PROYECTOS</h2>
+            <section class="tarjetas" id="trabajos">
+                <div class="card">
+                    <img src="img/gestion-de-proyectos.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <h4><b>Piezas publicitarias</b></h4>
+                    <p>Piezas audiovisuales que permitan difundir
+                        contenido educativo e informativo</p>
+                        <br>
+                    <a href="">Saber más</a> 
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/gestion-de-proyectos.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <h4><b>Gestión de proyectos</b></h4>
+                    <p>planeación, control y manejo de diferentes 
+                        proyectos y eventos</p>
+                        <br>
+                        <a href="">Saber más</a> 
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/gestion-de-proyectos.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                    <h4><b>Mockups y Wireframes</b></h4>
+                    <p>Diseño de prototipos como representación visual de portales web
+                    </p>
+                        <br>
+                        <a href="">Saber más</a> 
+                    </div>
+                </div>
+            </section>
+         </div>
+    </main>
+
+    <section class="form-header" id="seccionformulario">
+        <h2>Contacto</h2>
+        <p><em>¡Esperamos tu consulta!</em></p>
+        <form action="" method="get" class="formulario" id="form">
+       
+            <div class="form-row">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" />
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="ejemplo@mail.com"
+                  required 
+                />
+                <!--required muestra mensaje de que falta completar campo-->
+            </div>
+            <div class="form-row">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+            </div>
+            <div class="form-row">
+                <button type="submit" name="submit">Enviar</button>
+            </div>
+            <p class="alertas" id="alertas"></p>
+          </form>
+    </section>
+
+   <footer>
+        <div id="contacto">
+            Creado por Laura Tatiana Nieto Poveda - 2023 <br>
+            Puedes comunicarte enviando un mail a 
+            <a class="redes" href="mailto:lautanip@gmail.com">lautanip@gmail.com</a> 
+             o enviando un mensaje al
+            <a class="redes" href="https://wa.me/573104864779 ">Whatsapp</a>
+        </div>
+   </footer>
+   <script src="scripts.js"></script>
+</body>
+</html>

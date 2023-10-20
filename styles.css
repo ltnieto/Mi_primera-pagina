@@ -1,0 +1,380 @@
+/*Resetear o afectar todo el sitio*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #F7F9F9; /*Fondo*/
+}
+
+header h2{
+    font-style: bold;
+}
+
+.nombre{
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+header{
+    background-color:#d4efdfe3 ;
+    height: 65px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    justify-content: space-between; /*alineado a los bordes laterales*/
+}
+
+/*----------Menú principla---------------*/
+
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 40px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.toggle-menu{
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    width: 25px;
+    z-index: 1;
+}
+
+.main-menu{
+    justify-content: right;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color:#d4efdfe3;*/
+    width: 100%;
+    transform: translateY(-100%); /*esta el menu oculto*/
+    transition: transform 0.3s;
+
+    float: right;
+}
+
+.main-menu--show{
+    transform: translateY(0); /*esta el menu desplegado*/
+}
+
+.menu-item{
+    padding: 1em;
+}
+
+nav {
+   /* display:flex;
+    line-height: 80px;
+    text-transform: uppercase;*/
+    width: 100%;
+    float: right;
+}
+
+a {
+    color:#22211f;
+    text-decoration: none;
+  }
+
+ a:hover {
+    color: #d8771d;
+  }
+
+
+/*----------Contenido---------------*/
+.Banner{
+    background-color: #F8F9F9;
+    text-align: center;
+}
+
+.datos,.info{ /*clase*/
+    background-color: #F2F3F4;
+    text-align: center;
+}
+
+.info{
+    height: min-content;
+    padding: 80px;
+    align-content: center;
+}
+main{
+    background-color: #FFFFFF;
+    color: black;
+    padding: 2px;
+}
+
+section{
+    /*width: 100%;*/
+    padding: 65px 0px;
+}
+
+div.info{
+    margin: 10px 0px;
+}
+
+.info img{
+    max-width: 20%;
+    min-width: 300px;
+    height: auto;
+    margin-right: 40px;
+    display: flex;
+    float: left;
+    padding-bottom: 20px;
+}
+
+p{
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.fuente-oscura {
+    color: #22211f;
+}
+
+/*----------Botón---------------*/
+#btn{ /*id*/
+    width: 50%;
+    color:black;
+    background-color: #F7F9F9;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px, solid rgb(250, 198, 134);
+    font-family: monospace;
+    cursor: pointer;
+    align-items: center;
+}
+
+#btn:hover{
+    background-color: #D4EFDF;
+}
+
+
+/*----------Tarjetas---------------*/
+.proyectos{
+    margin-top: 50px;
+}
+.tarjetas{
+    padding: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    /* efecto sombra */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 20px 20px 50px 20px;
+    background-color: #FFFFFF;
+    width: 300px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 10px 26px;
+  }
+
+  .cardimg {
+    border-radius: 5px;
+  }
+
+/*----------Footer---------------*/
+footer{
+    width: 100%;
+    background-color:#7DCEA0;
+    padding: 30px;
+    text-align: center;
+    clear: both;
+}
+
+.redes{ /*clase*/
+    font-style: italic;
+    color: #eeeeee;
+}
+
+ /* ------------- Encabezado Contacto ------------- */
+  
+ section .seccionformulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-header {
+    text-align: center;
+    background-color: #f6f7f8;
+  
+    width: 100%;
+    margin: 10px;
+    padding: 50px;
+  }
+  
+  .form-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* ------------- Formulario ------------- */
+  
+
+  .formulario {
+    background-color: #f6f7f8;
+  
+    width: 100%;
+    padding: 50px;
+    margin: 30px 0 40px 0;
+  }
+
+  /* ------------- Campos del Formulario ------------- */
+
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .form-row input[type="text"] {
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+  
+  .form-row label {
+    margin-bottom: 3px;
+    text-align: initial;
+  }
+
+  .form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+  
+  
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+  
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+  
+  
+    width: 100%;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+  
+    color: #ffffff;
+    background-color: #f3a109;
+  
+  
+    border: none;
+    border-radius: 3px;
+  
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  
+  .form-row button:hover {
+    background-color: #edc776;
+  }
+  
+  
+  .form-row button:active {
+    background-color: #c7a340;
+  }
+
+/*----------Media queries----------*/
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+
+@media screen and (max-width: 768px) {
+    .main-menu{
+        background-color:#248d4e;
+        display: flex;
+    }
+    .menu-item a{
+        color: #FFFFFF;
+    }
+}
+
+  /* Estilos para pantallas más grandes (a partir de 769px) */
+@media screen and (min-width: 768px) {
+    .main-menu{
+        flex-direction: row;
+        transform: translateY(0); /*esta el menu desplegado*/
+    }
+    .toggle-menu{
+       display: none;
+    }
+    .form-header {
+        padding: 50px;
+      }
+      .form-row {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+      .form-row input[type="text"] {
+        width: 100%;
+        height: initial;
+      }
+      .form-row input[type="email"]{
+          background-color: #bdbdbd;
+          border: 0;
+          border-radius: 6px;
+          width: 100%;
+          padding: 7px;
+          font-size: 14px;
+      }
+      .form-row label {
+        text-align: left;
+        width: 120px;
+        margin-top: 7px;
+        padding-right: 20px;
+      }
+      .form-row textarea {
+          width: 100%;
+      }
+      .form-row button {
+          margin-left: 120px;
+          justify-content: center;
+      }
+}
+
